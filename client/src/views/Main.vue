@@ -64,7 +64,6 @@ name: "Main",
       for (let i in res.hits){
         this.video.push(res.hits[i].videos.medium.url)
       }
-      console.log(this.video)
     }
   },
   async mounted(){
