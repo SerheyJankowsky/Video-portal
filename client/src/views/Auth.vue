@@ -82,7 +82,8 @@ export default {
         this.$store.commit('setUser',this.userName)
         this.$store.commit('setPass',this.password)
         await this.$store.dispatch('login',data)
-        if(!this.$store.state.token){
+        const AuthUser = localStorage.getItem('access_token')
+        if(!AuthUser){
           alert('Wrong username or password')
           return
         }else{
